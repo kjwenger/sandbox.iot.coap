@@ -75,8 +75,40 @@ describe('CoAP', () => {
         req.end()
       })
     })
+    it('should communicate temperature as CBOR over IPv6', (done) => {
+      const object = {temperature: 27.3}
+      const server = coap.createServer({ type: 'udp6' })
+      server.on('request', (req, res) => {
+        const encoded = cbor.encode(object)
+        res.end(encoded)
+      })
+
+      server.listen(() => {
+        const req = coap.request('coap://[::1]/temperature')
+
+        req.on('error', (err) => {
+          console.error(err.message)
+          done(err)
+        })
+        req.on('response', (res) => {
+          res.on('end', () => {
+            done()
+          })
+
+          const decoder = new cbor.Decoder()
+          decoder.on('data', (decoded) => {
+            expect(decoded).to.eql(object)
+            server.close()
+          })
+
+          res.pipe(decoder)
+        })
+
+        req.end()
+      })
+    })
   })
-  describe('http client and coap server through proxy', () => {
+  xdescribe('http client and coap server through proxy', () => {
     it('should communicate temperature as CBOR', (done) => {
       const object = {temperature: 19.8}
       debug('object.temperature:', object.temperature)
