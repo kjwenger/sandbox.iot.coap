@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+project(sandbox.iot.coap)
+include("${CMAKE_SOURCE_DIR}/cmake/Paths.cmake")
+enable_testing()
+add_subdirectory(embedded)
