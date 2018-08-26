@@ -1,10 +1,10 @@
 set(CMAKE_SYSTEM_NAME Linux)
 
-if(NOT ${CROSS_PATH})
+if(NOT CROSS_PATH)
     get_filename_component(CROSS_PATH
-            "${CMAKE_CURRENT_SOURCE_DIR}/../esp/xtensa-esp32-elf"
+            "${CMAKE_CURRENT_SOURCE_DIR}/../embedded/espressif/esp32/esp/xtensa-esp32-elf"
             ABSOLUTE)
-endif(NOT ${CROSS_PATH})
+endif(NOT CROSS_PATH)
 
 set(CMAKE_C_COMPILER "${CROSS_PATH}/bin/xtensa-esp32-elf-gcc${EXECUTABLE_EXT}")
 set(CMAKE_AR         "${CROSS_PATH}/bin/xtensa-esp32-elf-ar${EXECUTABLE_EXT}")
