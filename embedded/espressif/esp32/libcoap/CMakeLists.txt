@@ -7,6 +7,7 @@ endif (NOT DEFINED CMAKE_PREFIX_PATH)
 include(ExternalProject)
 ExternalProject_Add(libcoap
         GIT_REPOSITORY https://github.com/obgm/libcoap.git
+        GIT_TAG origin/develop
         CONFIGURE_COMMAND ./autogen.sh && ./configure --prefix=${CMAKE_PREFIX_PATH}
         BUILD_IN_SOURCE 1
         BUILD_COMMAND make
