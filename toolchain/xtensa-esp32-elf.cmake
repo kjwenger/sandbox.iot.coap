@@ -1,3 +1,5 @@
+# https://raw.githubusercontent.com/warmcat/libwebsockets/master/contrib/cross-esp32.cmake
+
 set(CMAKE_SYSTEM_NAME Linux)
 
 if(NOT CROSS_PATH)
