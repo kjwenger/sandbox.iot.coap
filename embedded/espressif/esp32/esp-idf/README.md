@@ -1,5 +1,5 @@
 # sandbox.iot.coap
-Sandbox for all IoT CoAP Developments - FreeRTOS on Espressif ESP32
+Sandbox for all IoT CoAP Developments - ESP-IDF on Espressif ESP32
 
 ## Hardware
 
