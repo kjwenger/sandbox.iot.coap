@@ -10,14 +10,14 @@ coap.setSecurityParams(hostname, {
 })
 const bulb = parseInt(process.argv[2]) || 0
 debug('bulb:', bulb)
-const state = parseInt(process.argv[3]) || 0
-debug('state:', state)
+const level = parseInt(process.argv[3]) || 0
+debug('level:', level)
 const address = 65537 + bulb
 debug('address:', address)
 
 const target = `coaps://${process.env.IP_ADDRESS}:5684/15001/${address}`
 debug('target:', target)
-const object = { '3311': [ { '5850': state } ] }
+const object = { '3311': [ { '5851': level } ] }
 debug('object:', target)
 const json = JSON.stringify(object, null, 2)
 debug('json:', json)
