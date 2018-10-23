@@ -1,0 +1,35 @@
+{
+  "name": "ikea_tradfri",
+  "version": "0.0.1",
+  "description": "Sandbox for all IKEA TRÅDFRI IoT CoAP Developments",
+  "main": "index.js",
+  "engines": {
+    "node": "^8.9.4",
+    "npm": "^5.6.0"
+  },
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjwenger/sandbox.iot.coap.git"
+  },
+  "keywords": [
+    "coap",
+    "iot",
+    "cbor",
+    "core",
+    "IKEA",
+    "TRÅDFRI"
+  ],
+  "author": "Klaus Wenger <kjwenger@yahoo.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/kjwenger/sandbox.iot.coap/issues"
+  },
+  "homepage": "https://github.com/kjwenger/sandbox.iot.coap#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "node-tradfri-client": "git+https://github.com/AlCalzone/node-tradfri-client.git"
+  }
+}
