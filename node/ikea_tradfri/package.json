@@ -8,10 +8,10 @@
     "npm": "^5.6.0"
   },
   "scripts": {
-    "authenticate": "node authenticate",
-    "discover": "node discover",
-    "get_information": "node get_information",
-    "switch_bulb": "node switch_bulb",
+    "authenticate": "node node-tradfri-client/authenticate",
+    "discover": "node node-tradfri-client/discover",
+    "get_information": "node node-coap-client/get_information",
+    "switch_bulb": "node node-coap-client/switch_bulb",
     "start": "node index"
   },
   "repository": {
@@ -34,9 +34,11 @@
   "homepage": "https://github.com/kjwenger/sandbox.iot.coap#readme",
   "devDependencies": {},
   "dependencies": {
+    "cbor": "^4.1.1",
     "coap": "^0.22.0",
     "debug": "^4.1.0",
     "node-coap-client": "^1.0.0",
+    "node-tradfri": "^0.2.3",
     "node-tradfri-client": "git+https://github.com/AlCalzone/node-tradfri-client.git"
   }
 }
